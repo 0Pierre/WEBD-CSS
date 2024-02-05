@@ -1,0 +1,17 @@
+Topics: DOM Manipulation, DOM Events, HTL, Css Styling, Event bubbling
+
+Task: Build a tic tac toe game
+    - User Story
+        - As a user, I want to click on oen of the squares and it should give either an X or an O
+        Depending on who's turn it is
+        - As a User, I want to click on a square after X has played, abd ut should show an O
+        (In technical terms, alternate X's and O's on each click)
+        - As a user, I want to know whether or not i won or lost, or if it is a draw
+        (In technical terms, calculate the game result based on the X and O patterns
+        based on the board)
+
+    - Write HTML Elements
+        - Build grid with  9 + 1 Divs
+    
+    - Write Css
+        - Style divs to make it look like a grid 

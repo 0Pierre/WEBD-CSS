@@ -1,0 +1,16 @@
+Topics: DOM Munipulation, DOM Events, Even Handlers, HTML Forms, Handiling User Input
+
+Task: Create a to do list
+    - User Story
+        - As a User, I want to type into a textbox my todo
+        - As a User, I want to click on the 'Add' button and add the to do that i
+          typed from the text box onto my todo list
+    
+    - write HTML Element
+        - Title
+        - List
+        - Form with an Input Element
+        - Button
+        - Checkbox 
+        - 
+    - 
