@@ -1,7 +1,7 @@
 /* ------------------------------------------ nav bar --------------------------------------------------*/
 
 .navigation-bar {
-    padding: 20px; /* Adjust the padding as needed */
+    padding: 20px;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -71,13 +71,40 @@ body{
 }
 
 .headings{
-    font-size:100px;
-    font-stretch: expanded;
-}
-.text-with-background {
-    background-color: rgba(42, 204, 150, 0.8); /* Background color with transparency */
-    padding: 20px; /* Adjust padding as needed */
+    font-size:110px;
+    color:white;
+    text-shadow: 2px 2px 5px black;
+    font-display: auto;
 }
 p{
-    font-size: 30px;
+    font-size: 25px;
+    opacity: 0.3;
+}
+
+.my-4{
+    border-width: 3px;
+    border-color: white;
+}
+
+table.center {
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.581);
+    color:white;
+    text-shadow: 2px 2px 5px black;
+  }
+table {
+    width: 97%; /* Adjust the width percentage as needed */
+    max-width: 1900px; /* Adjust the maximum width as needed */
+    padding : 50px;
+    border-collapse: collapse;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+th, td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid white;
 }

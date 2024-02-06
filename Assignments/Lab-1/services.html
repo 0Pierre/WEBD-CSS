@@ -24,8 +24,9 @@
     />
     <title>Services</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded p-2 rounded-3 " data-bs-theme="dark">
+<body class="background-container">
+  <div class="navigation-bar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded p-2 rounded-3" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Web Development - CSS</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,10 +35,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link"  href="index.html"><i class="bi bi-house-door"></i>&nbsp;  |&nbsp;  Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door"></i>&nbsp;  |&nbsp;  Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="services.html">&nbsp; <i class="bi bi-tools"></i>&nbsp;  |&nbsp;  Services</a>
+                <a class="nav-link" href="services.html">&nbsp; <i class="bi bi-tools"></i>&nbsp;  |&nbsp;  Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="product.html">&nbsp; <i class="bi bi-basket"></i>&nbsp;  |&nbsp;  Product</a>
@@ -52,7 +53,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true"></a> 
+                <a class="nav-link disabled" aria-disabled="true"></a> <!-- For disabled labels -->
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -62,7 +63,53 @@
           </div>
         </div>
       </nav>
-      <hr class="my-4" style="border-width: 2px;">
-      <h1>services</h1>
+    <hr class="my-4">
+  </div>
+  <div>
+    <header class="header">
+      <h1 class="headings">Welcome to my Website</h1>
+    </header>
+    <table class="center rounded-5">
+      <section class = "section">
+        <tr><!-- row 1 -->
+          <th> <h2 class ="section__paragraph">Home Page:</h2> </th> 
+          <td>
+            <p class="section__paragraph">The Home Page is the welcoming gateway to our site, featuring an intriguing background 
+            image that captures attention. Accompanied by warm and inviting text, it greets 
+            visitors and sets the tone for their journey through our content.
+            </p>
+          </td>
+        </tr>
+        <tr> <!-- row 2 -->
+          <th> <h2 class ="section__paragraph">Product Page:</h2> </th> 
+          <td>
+            <p class="section__paragraph">On the Product Page, we showcase three of our favorite pieces of media, ranging from 
+              books and movies to music and podcasts. Each item is accompanied by vibrant descriptions and captivating images,
+              enticing visitors to explore further.
+            </p>
+          </td>
+        </tr>
+        <tr> <!-- row 3 -->
+          <th> <h2 class ="section__paragraph">Services Page:</h2> </th> 
+          <td>
+            <p class="section__paragraph">The Services Page highlights three of our top skills and offerings for clients. 
+              With engaging text and illustrative images, we present services such as custom programming, web design, and 
+              mobile development. Additionally, we provide links to our resumes for visitors to delve deeper into our expertise.
+            </p>
+          </td>
+        </tr>
+        <tr> <!-- row 4 -->
+          <th> <h2 class ="section__paragraph">About Me:</h2> </th> 
+          <td>
+            <p class="section__paragraph">The About Me Page offers insights into who we are beyond our professional endeavors. 
+              Through engaging narratives and current images or avatars, we share details about ourselves, our families, pets, 
+              and community involvements. This page maintains a tone of authenticity and inclusivity, ensuring that it remains 
+              appropriate for all audiences.
+            </p>
+          </td>
+        </tr>
+      </section>
+    <table>
+  </div>
 </body>
 </html>
