@@ -1,0 +1,83 @@
+/* ------------------------------------------ nav bar --------------------------------------------------*/
+
+.navigation-bar {
+    padding: 20px; /* Adjust the padding as needed */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* ------------------------------------------ background --------------------------------------------------*/
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/image1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: 5s;
+
+    animation-name: animate;
+    animation-duration: alternate-reverse;
+    animation-play-state: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes animate{
+    0%{
+        background-image: url(../images/image1.png);
+    }
+    20%{
+        background-image: url(../images/image2.png);
+    }
+    40%{
+        background-image: url(../images/image3.png);
+    }
+    60%{
+        background-image: url(../images/image1.png);
+    }
+    80%{
+        background-image: url(../images/image2.png);
+    }
+    100%{
+        background-image: url(../images/image3.png);
+    }
+}
+/* ------------------------------------------ intext  --------------------------------------------------*/
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section {
+    height: 100vh;
+    padding: 1rem;
+}
+
+.section__paragraph{
+    margin: 1rem 0;
+    transform: translateY(20px);
+    opacity: 0; 
+    transition: 3s ease;
+    justify-content: center;
+}
+.section__paragraph--visable{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.headings{
+    font-size:100px;
+    font-stretch: expanded;
+}
+.text-with-background {
+    background-color: rgba(42, 204, 150, 0.8); /* Background color with transparency */
+    padding: 20px; /* Adjust padding as needed */
+}
+p{
+    font-size: 30px;
+}
