@@ -1,3 +1,4 @@
+/** the trigger for fading in text**/
 const paragraphs = document.querySelectorAll(".section__paragraph");
 
 document.addEventListener("scroll", function(){
@@ -7,27 +8,30 @@ document.addEventListener("scroll", function(){
         }
     });
 });
-// fading in text
+
+/**when text is in view**/
 function isInView (elment){
     const rect = elment.getBoundingClientRect();
     return (rect.bottom > 0 && rect.top < 
             (window.innerHeight - 150 || document.documentElement.clientHeight - 150));
 }
-// Chaging product to Intrests
+
+/** changing the word product to Intrests **/
 var productLink = document.getElementById('products').querySelector('a');
 productLink.textContent = productLink.textContent.replace("Product", "Interests");
 productLink.innerHTML = '<i class="bi bi-basket"></i>' + productLink.innerHTML;
 
-//adding a new nav item between about me and contact me
+/**adding a new nav item between about me and contact me**/
 
-
+    //create new element
     var hrLink = document.createElement('li');
     hrLink.innerHTML = `<a class="dropdown-item" href="#"><i class="fas fa-users"></i>&nbsp;  |&nbsp;  Human Resources</a>`;
 
+    //
     var contactLink = document.querySelector('a[href="contact.html"]').parentNode;
     contactLink.parentNode.insertBefore(hrLink, contactLink);
 
-// creating a fixed nav bar at the bottom of the page
+/**creating a fixed nav bar at the bottom of the page**/
 
     // Create navbar element
     var navbar = document.createElement('nav');
@@ -53,3 +57,29 @@ productLink.innerHTML = '<i class="bi bi-basket"></i>' + productLink.innerHTML;
 
     // Append navbar to the body
     document.body.appendChild(navbar);
+
+/**creating a contact form for users**/
+
+    // Get the form element
+    var form = document.getElementById('contactForm');
+
+    // Add event listener for form submission
+    form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Get form data
+    var formData = new FormData(form);
+    var formDataObject = {};
+    formData.forEach(function(value, key) {
+        formDataObject[key] = value;
+    });
+
+    // Log form data to console
+    console.log(formDataObject);
+
+    // Start timer to redirect after 3 seconds
+    setTimeout(function() {
+        window.location.href = "index.html"; // Redirect to Home Page
+    }, 3000);
+    });
+

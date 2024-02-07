@@ -69,45 +69,21 @@
     <header class="header">
       <h1 class="headings">Welcome to my Website</h1>
     </header>
-    <table class="center rounded-5">
-        <tr><!-- row 1 -->
-          <th> <h2 class ="section__paragraph">Home Page:</h2> </th> 
-          <td>
-            <p class="section__paragraph">The Home Page is the welcoming gateway to our site, featuring an intriguing background 
-            image that captures attention. Accompanied by warm and inviting text, it greets 
-            visitors and sets the tone for their journey through our content.
-            </p>
-          </td>
-        </tr>
-        <tr> <!-- row 2 -->
-          <th> <h2 class ="section__paragraph">Product Page:</h2> </th> 
-          <td>
-            <p class="section__paragraph">On the Product Page, we showcase three of our favorite pieces of media, ranging from 
-              books and movies to music and podcasts. Each item is accompanied by vibrant descriptions and captivating images,
-              enticing visitors to explore further.
-            </p>
-          </td>
-        </tr>
-        <tr> <!-- row 3 -->
-          <th> <h2 class ="section__paragraph">Services Page:</h2> </th> 
-          <td>
-            <p class="section__paragraph">The Services Page highlights three of our top skills and offerings for clients. 
-              With engaging text and illustrative images, we present services such as custom programming, web design, and 
-              mobile development. Additionally, we provide links to our resumes for visitors to delve deeper into our expertise.
-            </p>
-          </td>
-        </tr>
-        <tr> <!-- row 4 -->
-          <th> <h2 class ="section__paragraph">About Me:</h2> </th> 
-          <td>
-            <p class="section__paragraph">The About Me Page offers insights into who we are beyond our professional endeavors. 
-              Through engaging narratives and current images or avatars, we share details about ourselves, our families, pets, 
-              and community involvements. This page maintains a tone of authenticity and inclusivity, ensuring that it remains 
-              appropriate for all audiences.
-            </p>
-          </td>
-        </tr>
-      </table>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+    
+      <label for="contactNumber">Contact Number:</label>
+      <input type="tel" id="contactNumber" name="contactNumber" required><br><br>
+    
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br><br>
+    
+      <label for="message">Short Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    
+      <button type="submit">Submit</button>
+    </form>    
   </div>
 </body>
 </html>
