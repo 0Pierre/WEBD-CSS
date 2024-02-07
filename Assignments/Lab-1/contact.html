@@ -67,23 +67,33 @@
   </div>
   <div>
     <header class="header">
-      <h1 class="headings">Welcome to my Website</h1>
+      <h1 class="headings">Contact Form</h1>
     </header>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
-    
-      <label for="contactNumber">Contact Number:</label>
-      <input type="tel" id="contactNumber" name="contactNumber" required><br><br>
-    
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required><br><br>
-    
-      <label for="message">Short Message:</label><br>
-      <textarea id="message" name="message" rows="4" required></textarea><br><br>
-    
-      <button type="submit">Submit</button>
-    </form>    
+    <div>
+      <table class="center size rounded-5">
+          <caption style="caption-side: top; text-align: center;">Contact Information</caption>
+          <tr><!-- row 1 --> 
+              <td>
+                  <form id="contactForm">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required><br><br>
+  
+                      <label for="contactNumber">Contact Number:</label>
+                      <input type="tel" id="contactNumber" name="contactNumber" required><br><br>
+  
+                      <label for="email">Email Address:</label>
+                      <input type="email" id="email" name="email" required><br><br>
+  
+                      <label for="message">Short Message:</label><br>
+                      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+  
+                      <button type="submit">Submit</button>
+                  </form>
+              </td>
+          </tr>
+      </table>
+  </div>
+      
   </div>
 </body>
 </html>
