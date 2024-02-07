@@ -8,40 +8,29 @@
 }
 
 /* ------------------------------------------ background --------------------------------------------------*/
-body{
+body {
     height: 100vh;
     width: 100%;
     background-image: url(../images/image1.png);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-attachment: fixed;
-    transition: 5s;
 
     animation-name: animate;
-    animation-duration: alternate-reverse;
-    animation-play-state: ease-in-out;
-    animation-duration: 30s;
-    animation-fill-mode: forwards;
+    animation-duration: 20s; /* Duration of the entire animation cycle */
+    animation-timing-function: linear; /* Ensures uniform speed between keyframes */
     animation-iteration-count: infinite;
 }
-@keyframes animate{
-    0%{
+
+@keyframes animate {
+    0%, 100% {
         background-image: url(../images/image1.png);
     }
-    20%{
+    33.33% {
         background-image: url(../images/image2.png);
     }
-    40%{
-        background-image: url(../images/image3.png);
-    }
-    60%{
-        background-image: url(../images/image1.png);
-    }
-    80%{
-        background-image: url(../images/image2.png);
-    }
-    100%{
+    66.66% {
         background-image: url(../images/image3.png);
     }
 }
@@ -95,7 +84,7 @@ table.center {
     color:white;
     text-shadow: 2px 2px 5px black;
   }
-table {
+table.size {
     width: 97%; /* Adjust the width percentage as needed */
     max-width: 1900px; /* Adjust the maximum width as needed */
     padding : 50px;
@@ -106,5 +95,35 @@ table {
 th, td{
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid white;
 }
+caption{
+    font-size:50px;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    font-display: auto;
+}
+
+/* ------------------------------------------ product page images  --------------------------------------------------*/
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
