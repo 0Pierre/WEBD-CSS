@@ -18,8 +18,8 @@ function isInView (elment){
 
 /** changing the word product to Intrests **/
 var productLink = document.getElementById('products').querySelector('a');
-productLink.textContent = productLink.textContent.replace("Product", "Interests");
-productLink.innerHTML = '<i class="bi bi-basket"></i>' + productLink.innerHTML;
+productLink.textContent = productLink.textContent.replace("Product","Interests");
+productLink.innerHTML = '<i class="bi bi-basket"></i>'+ productLink.innerHTML;
 
 /**adding a new nav item between about me and contact me**/
 
@@ -35,7 +35,7 @@ productLink.innerHTML = '<i class="bi bi-basket"></i>' + productLink.innerHTML;
 
     // Create navbar element
     var navbar = document.createElement('nav');
-    navbar.classList.add('navbar', 'navbar-dark', 'bg-dark', 'fixed-bottom');
+    navbar.classList.add('navbar', 'navbar-dark', 'bg-dark', 'fixed-bottom',);
 
     // Create container for navbar contents
     var container = document.createElement('div');
