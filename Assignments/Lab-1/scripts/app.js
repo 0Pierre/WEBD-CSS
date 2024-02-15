@@ -10,8 +10,8 @@ document.addEventListener("scroll", function(){
 });
 
 /**when text is in view**/
-function isInView (elment){
-    const rect = elment.getBoundingClientRect();
+function isInView (element){
+    const rect = element.getBoundingClientRect();
     return (rect.bottom > 0 && rect.top < 
             (window.innerHeight - 150 || document.documentElement.clientHeight - 150));
 }
@@ -35,11 +35,11 @@ productLink.innerHTML = '<i class="bi bi-basket"></i>'+ productLink.innerHTML;
 
     // Create navbar element
     var navbar = document.createElement('nav');
-    navbar.classList.add('navbar', 'navbar-dark', 'bg-dark', 'fixed-bottom',);
+    navbar.classList.add('navbar', 'navbar-dark', 'bg-dark', 'fixed-bottom');
 
     // Create container for navbar contents
     var container = document.createElement('div');
-    container.classList.add('container-fluid');
+    container.classList.add('container-footer');
 
     // Create copyright statement
     var copyright = document.createElement('span');
@@ -59,27 +59,51 @@ productLink.innerHTML = '<i class="bi bi-basket"></i>'+ productLink.innerHTML;
     document.body.appendChild(navbar);
 
 /**creating a contact form for users**/
+document.addEventListener('DOMContentLoaded',function(){
+    console.log("1");
+    
+    $("contactForm").submit(function(event){
+        console.log("2");
 
-    // Get the form element
-    var form = document.getElementById('contactForm');
-
-    // Add event listener for form submission
-    form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    // Get form data
-    var formData = new FormData(form);
-    var formDataObject = {};
-    formData.forEach(function(value, key) {
-        formDataObject[key] = value;
+        event.preventDefault(); // Prevent default form submission behavior
+    
+        // Get form data
+        var formData = new FormData("contactForm");
+        var formDataObject = {};
+        formData.forEach(function(value, key) {
+            formDataObject[key] = value;
+        });
+    
+        // Log form data to console
+        console.log(formDataObject);
+    
+        // Start timer to redirect after 5 seconds
+        setTimeout(function() {
+            window.location.href = "index.html"; // Redirect to Home Page
+        }, 5000);
     });
+});
 
-    // Log form data to console
-    console.log(formDataObject);
+var navigationBar = document.querySelector('.navigation-bar');
+var lastScrollTop = 0;
+    
+// Function to handle scroll events
+function handleScroll() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Start timer to redirect after 3 seconds
-    setTimeout(function() {
-        window.location.href = "index.html"; // Redirect to Home Page
-    }, 3000);
-    });
-
+   // If scrolling down
+    if (scrollTop > lastScrollTop) {
+        // Decrease opacity gradually
+        navigationBar.style.opacity = Math.max(0, 1 - scrollTop / 300); // Adjust 200 to change the speed
+    } else {
+        // If scrolling up, make the navigation bar fully visible
+        navigationBar.style.opacity = 1;
+    }
+    
+    // Update last scroll position
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }
+    
+// Listen for scroll events
+window.addEventListener('scroll', handleScroll);
+    
