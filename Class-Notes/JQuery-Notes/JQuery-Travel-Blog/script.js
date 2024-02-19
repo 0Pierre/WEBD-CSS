@@ -36,9 +36,9 @@ $(document).ready(function () {
       { alt: "Hiking Trail", src: "mountain3.jpg" },
     ],
     cities: [
-      { alt: "Toronto", src: "city1.jpg" },
-      { alt: "New York", src: "city2.jpg" },
-      { alt: "Oshawa", src: "city3.jpg" },
+      { alt: "Toronto", src: "./images/city1.jpg" },
+      { alt: "New York", src: "./images/city2.jpg" },
+      { alt: "Oshawa", src: "./images/city3.jpg" },
     ],
     forests: [
       { alt: "Amazon Rain Forest", src: "forest1.jpg" },
@@ -46,9 +46,9 @@ $(document).ready(function () {
       { alt: "Forest Trail", src: "forest3.jpg" },
     ],
     deserts: [
-      { alt: "Sahara Desert", src: "desert1.jpg" },
-      { alt: "Gobi Desert", src: "desert2.jpg" },
-      { alt: "Kalahari Desert", src: "desert3.jpg" },
+      { alt: "Sahara Desert", src: "./images/desert1.jpg" },
+      { alt: "Gobi Desert", src: "./images/desert2.jpg" },
+      { alt: "Kalahari Desert", src: "./images/desert3.jpg" },
     ]
   };
   // category = beaches
@@ -77,7 +77,7 @@ $(document).ready(function () {
   }
 
   window.moveCarousel = function (category, direction) {
-    debugger;
+    
     let items = $(`#${category}-carousel .carousel-item`);
 
     let activeIndex = items.index(items.filter(".active"));
@@ -92,6 +92,14 @@ $(document).ready(function () {
     items.removeClass("active");
     items.eq(newIndex).addClass("active");
   };
+
+  //3. add cotent to the footer 
+  const favouriteCategories = "Cities";
+  const favouriteDescription = "Cities would have to be one of my favourite categories due to how much you can do. \n One place would be Toronto due to the endless things you can do.";
+  const footerContent = `<p> My favourite Category: ${favouriteCategories} </p>
+                         <p> Description: ${favouriteDescription} </p>`;
+  $("#footer").html(footerContent);
+
 });
 
 // ICE 5 Tasks:
