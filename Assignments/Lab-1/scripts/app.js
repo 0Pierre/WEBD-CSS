@@ -105,5 +105,90 @@ function handleScroll() {
     }
     
 // Listen for scroll events
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);
+
+/**Setting up form validation with registrastion page and **/
+    //login form
+    $(document).ready(function () {
+        //animate form appearance
+        $("#loginForm").hide().fadeIn(3000);
+        
+        $("#loginForm").submit(function (e) {
+            e.preventDefault(); // prevent form submission
+
+            var username = $("#usernameInput").val();
+            if (username.trim() !== "") {
+                var $usernameLink = $("<a>").addClass("nav-link").text(username);
+                
+                var $moreDropdown = $(".dropdown-menu").parent();
+
+                $moreDropdown.after("<li class='nav-item' id='username-link'></li>");
+                $("#username-link").append($usernameLink);
+            }
+        });
+    });
+
+    // Define the User class
+    class User {
+        constructor(firstName, lastName, email, password) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.password = password;
+        }
+    }
+
+    //registration form
+    $(document).ready(function () {
+
+        $("#errorMessage").hide();
+
+         //animate form appearance
+        $("#registerForm").hide().fadeIn(3000);
     
+        $("#registerForm").submit(function (e) {
+            e.preventDefault(); // prevent form submission 
+    
+            $("#errorMessage").empty().hide();
+    
+            let firstName = $("#fname").val().trim();
+            let lastName = $("#lname").val().trim();
+            let email = $("#email").val();
+            let password = $("#password").val();
+            let confirmPassword = $("#confirmPass").val();
+            console.log(firstName,lastName,email,password,confirmPassword)
+    
+            // Validation checks
+            if (firstName.length < 2 || lastName.length < 2) {
+                displayErrorMessage("First name and last name must be at least 2 characters long.");
+                return;
+            }else{
+                //console.log("pass1")
+            }
+    
+            if (email.length >= 12) {
+                //console.log("pass2")
+            }else{
+                displayErrorMessage("Invalid email address.");
+                return;
+            }
+    
+            if (password.length < 6 || password !== confirmPassword) {
+                displayErrorMessage("Passwords must be at least 6 characters long and match.");
+                return;
+            }else{
+                //console.log("pass3")
+            }
+
+            let newUser = new User(firstName, lastName, email, password);
+            console.log("New User:", newUser);
+            $("#registerForm")[0].reset();
+        });
+    
+        // Function to display error messages
+        function displayErrorMessage(message) {
+            $("#errorMessage").html(`
+                <p>Error: ${message}</p>
+            `).slideDown();
+        }
+    });

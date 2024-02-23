@@ -4,7 +4,7 @@ $(document).ready(function() {
     console.log("dom is ready");
 
     //animate form appearance
-    $("#registration-form").hide().fadeIn(3000);
+    $("#registration-form").hide().fadeIn(2000);
 
     //handle the form submission
     $("#signup-form").submit(function(event){
