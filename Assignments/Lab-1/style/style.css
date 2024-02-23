@@ -9,18 +9,25 @@
 }
 /* footer */
 .container-footer {
-    
+    padding-left: 2%;
 }
+.btn.btn-outline-success {
+    cursor: pointer;
+    width: 90%;
+    padding: 2%;
+}
+
 
 /* ------------------------------------------ background --------------------------------------------------*/
 body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url(../images/image1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
     background-attachment: fixed;
+    padding-bottom: 4%;
 
     animation-name: animate;
     animation-duration: 20s; /* Duration of the entire animation cycle */
@@ -130,3 +137,8 @@ div.gallery {
   div.desc {
     text-align: center;
   }
+/* ------------------------------------------ Register and Login page  --------------------------------------------------*/
+
+.outer-layer{
+    background-color: rgba(0, 0, 0, 0.298);
+}
