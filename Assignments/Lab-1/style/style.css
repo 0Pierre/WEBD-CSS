@@ -140,5 +140,119 @@ div.gallery {
 /* ------------------------------------------ Register and Login page  --------------------------------------------------*/
 
 .outer-layer{
-    background-color: rgba(0, 0, 0, 0.298);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.warper{
+    width: 420px;
+    background: transparent;
+    background-color: rgba(128, 128, 128, 0.445);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.356);
+    box-shadow: 0 0 10px black;
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.warper h1 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.warper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    color: #ffff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #ffff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.warper .remeber-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 15px 0 15px;
+}
+
+.remeber-forgot label input {
+    accent-color: #ffff;
+    margin-right: 3px;
+}
+
+.remeber-forgot a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.remeber-forgot a:hover{
+    text-decoration: underline;
+}
+
+.warper .btn{
+    width: 100%;
+    height: 45px;
+    background: #ffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.warper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p {
+    color: #ffff;
+    text-decoration: none;
+    opacity: 1;
+    font-size: 15px;
+}
+.register-link a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
 }
