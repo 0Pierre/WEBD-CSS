@@ -111,7 +111,7 @@ window.addEventListener("scroll", handleScroll);
     //login form
     $(document).ready(function () {
         //animate form appearance
-        $("#loginForm").hide().fadeIn(3000);
+        $("#loginForm").hide().fadeIn(2000);
         
         $("#loginForm").submit(function (e) {
             e.preventDefault(); // prevent form submission
@@ -144,7 +144,7 @@ window.addEventListener("scroll", handleScroll);
         $("#errorMessage").hide();
 
          //animate form appearance
-        $("#registerForm").hide().fadeIn(3000);
+        $("#registerForm").hide().fadeIn(2000);
     
         $("#registerForm").submit(function (e) {
             e.preventDefault(); // prevent form submission 
