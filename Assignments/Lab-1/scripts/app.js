@@ -47,7 +47,7 @@ productLink.innerHTML = '<i class="bi bi-basket"></i>'+ productLink.innerHTML;
     copyright.textContent = '\u00A9 ' + currentDate + ' Francisco Gonzalez Moreno';
 
     // Apply white color to text
-    copyright.style.color = 'white';
+    copyright.style.color = 'grey';
 
     // Append copyright statement to container
     container.appendChild(copyright);

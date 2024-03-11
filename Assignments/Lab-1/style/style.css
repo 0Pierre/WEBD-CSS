@@ -20,7 +20,6 @@
 .nav-item#username-link a.nav-link {
     color: #ffffff;
     font-weight: 700;
-
     text-decoration: underline; 
 }
 /* ------------------------------------------ background --------------------------------------------------*/
@@ -153,6 +152,8 @@ div.gallery {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .warper{

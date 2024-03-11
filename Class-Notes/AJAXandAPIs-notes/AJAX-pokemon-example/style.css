@@ -1,32 +1,33 @@
-h1.border {
-    border: 2px solid lightgray;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
+body{
+    border: 5px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(0, 0, 0, 0.089);
 }
 
-div.container{
-    
+div{
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 5px;
 }
 
-div.btnDiv{
-    /* border: 2px solid black; */
-    padding-top: 2%;
-}
-
-button.btn{
-    border: 3px solid aqua;
-    background-color:lightblue;
-    font-weight: 200;
-    font-size: 20px;
+p {
     color: white;
-    border-radius: 10px;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
-button.btn:hover{    
-    border: 3px solid aqua;
-    background-color:lightblue;
-    font-weight: 200;
-    font-size: 20px;
-    color: black;
+h2{
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    padding-left: 5px;
+}
+
+h1{
+    color: grey;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
