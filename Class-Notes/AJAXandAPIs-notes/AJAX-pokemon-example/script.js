@@ -1,165 +1,65 @@
-console.log("Script is running!");
+console.log("script is running")
 
-// --------------- Asynchronous API Call using XMLHttpRequest --------------------
+// document.getElementById("loadPokemon").addEventListener("click",function(){
+    
+//     //grab the api data fro the pokemon
+//     var xhr = new XMLHttpRequest();
 
-// document.getElementById("loadPokemon").addEventListener("click", function () {
-//   // We want to create a new XMLHTTPRequest Object to grab the Pokemon API Data
+//     //GET HTTP request to the pokemon API via the URL. IT IS ASYNCHRONOUS meaning it can slow down your code
+//     xhr.open("GET", "https://pokeapi.co/api/v2/pokemon?limit=10&offeset=0");
 
-//   console.log("callback function");
-//   var xhr = new XMLHttpRequest();
+//     xhr.onload = function () {
+//         // console.log("api as responded!")
+//         // console.log(this);
+//         var response = JSON.parse(this.responseText);
+//         console.log(response)
+//         var pokemonString = "";
+//         response.results.forEach((pokemon) => {
+//             pokemonString += `<li><a href=${pokemon.url}>${pokemon.name}<a/></li>`
+//         });
+//         document.getElementById("pokemonList").innerHTML = pokemonString;
+//     };
 
-//   // The line below will create a GET HTTP Request to the pokemon API via the URL
-//   // The call below is ASYNCHRONOUS
-//   xhr.open("GET", "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0");
-
-//   xhr.onload = function () {
-//     console.log("API has responded!");
-//     //   console.log(this);
-//     var response = JSON.parse(this.responseText);
-//     console.log(response);
-//     var pokemonString = "";
-//     response.results.forEach((pokemon) => {
-//       pokemonString += `<li><a href=${pokemon.url}>${pokemon.name}</a></li>`;
-//     });
-//     document.getElementById("pokemonList").innerHTML = pokemonString;
-//   };
-//   xhr.send();
+//     xhr.send();
 // });
 
-// --------------- Asynchronous API Call using fetch --------------------
+//proiese
 
-// Promises
+// var userData = await postgresDatabase.GetUserData() 
+function fetchUserData (userData){
+    return new Promise((resolve, reject) =>{
+        setTimeout(() =>{
+            // reject({status: 400, error: "COuldnt not find"})
+            resolve({username: 'user', password: 123});
+        }, 5000)
+    });
 
-// var userData = await postgresDatabase.GetUserData() // for example takes 5 seconds
-// Using Async/Await to handle promise
-// function fetchUserData(userData) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve({ username: "user", password: 123 });
-//       // reject({ status: 400, error: "could not find user" });
-//     }, 5000);
-//   });
-// }
-
-// async function handlePromise() {
-//   console.log("Initiating call to database...");
-//   let promiseResult = await fetchUserData();
-//   console.log(promiseResult);
-// }
-
-// handlePromise();
-
-// The reason we are defining a promise in the format below is to simulate an API/Database call
-// const DBGetUserData = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     resolve({ username: "user", password: 123 });
-//     // reject({ status: 400, error: "could not find user" });
-//   }, 5000);
-// });
-
-// console.log(DBGetUseData);
-// Using .THEN()
-// The code below will WAIT until the promise resolves (either fulfilled or rejected and THEN it will execute the callback function and pass the promise response as an argument to it)
-// DBGetUserData.then((response) => {
-//   console.log("Promise successfully fulfilled: ", response);
-// })
-//   // .then(res => { });
-//   // .then(res => { });
-//   // .then(res => { });
-//   .catch((err) => console.log("Promise error was caught: ", err));
-
-// console.log(" I am line 71 and I ran.");
-
-// document.getElementById("loadPokemon").addEventListener("click", function () {
-//   // Fetch the list of pokemons
-//   // Using FETCH and .THEN
-// let pokemonList = fetch(
-//   "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0",
-//   {
-//     method: "GET",
-//   }
-// )
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((jsonResult) => {
-//     // The scope of the jsonResult variable is limited to only this .then callback function
-//     console.log(jsonResult);
-//     var pokemonString = "";
-//     // Display list of pokemons in HTML
-//     jsonResult.results.forEach((pokemon) => {
-//       pokemonString += `<li><a href=${pokemon.url}>${pokemon.name}</a></li>`;
-//     });
-//       document.getElementById("pokemonList").innerHTML = pokemonString;
-//       return jsonResult;
-//     })
-//     .catch((err) => console.log("We have encountered an error: ", err))
-//     .finally(() => {
-//       console.log("API Call complete.");
-//     });
-// });
-
-// USING FETCH & ASYNC AWAIT
-// document
-//   .getElementById("loadPokemon")
-//   .addEventListener("click", async function () {
-//     // Fetch the list of pokemons
-//     try {
-//       let pokemonList = await fetch(
-//         // URL: for ICE -> Store user input in variable called pokemonName
-//         // `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-
-//         "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
-//       ); // By Default, it sends a GET HTTP Request
-//       var pokemonString = "";
-//       // debugger;
-//       var jsonResults = await pokemonList.json();
-//       jsonResults.results.forEach((pokemon) => {
-//         pokemonString += `<li><a href=${pokemon.url}>${pokemon.name}</a></li>`;
-//       });
-//       document.getElementById("pokemonList").innerHTML = pokemonString;
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   });
-
-// ICE 6: DUE Monday @ 11:59 PM
-// 1. Create a form where the user will be able to type in the name of a pokemon
-
-let userInput = document.getElementById("user-input");
-// 2. After the user submits the form, send an API GET Request to the pokeapi searching for the details of the pokemon name the user submitted from the form.
-
-document.getElementById("searchPokemon").addEventListener("click", async () => {
-  let pokemonName = userInput.value.toLowerCase();
-  console.log(pokemonName)
-  let pokemonDetail = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-  console.log(pokemonDetail)
-
-  if (pokemonDetail.ok)
-  {
-    console.log("1")
-    let pokemon = await pokemonDetail.json();
-    displayPokemon(pokemon);
-  }else{
-    displayError("Pokemon not found! Try again...");
-  }
-});
-
-// 3. If the api returns the pokemon details successfully, then display the details of the pokemon in the HTML (i.e. update the body of the HTML to have the pokemon)
-//function for displaying pokemon details
-function displayPokemon (pokemon) {
-    let pokemonDetailDiv = document.getElementById("pokemon-details")
-    pokemonDetailDiv.innerHTML = `
-    <h2>${pokemon.name}</h2>
-    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
-    <p>Weight: ${pokemon.weight}.Kgs</p>
-    <p>Height: ${pokemon.height}.Ft</p>
-    `
 }
 
-//4 If  the api returns an error that it can't find the pokemon, display the error to the user and ask them to type a different pokemon name
-//function for diasplaying Error message
-function displayError (message){
-    let pokemonDetailDiv = document.getElementById("pokemon-details")
-    pokemonDetailDiv.innerHTML = `<p>${message}</p>`
-}   
+async function handlePromise (){
+    console.log("INitiatin call to the database...");
+    let promiseResault = await fetchUserData();
+    console.log(promiseResault)
+}
+
+handlePromise();
+// // console.log(DBGetUserData)
+
+// DBGetUserData.then(response => {
+//     console.log(response)
+// })
+//     .catch(err => console.log('Promise error caught',err))
+
+document.getElementById("loadPokemon").addEventListener("click",function(){
+    let pokemonList = fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offeset=0",{
+        method: "GET",
+        }
+    )
+        .then(response=>{
+        return response
+    }).catch((err) => console.log("Error!:", err))
+    .finally(()=>{
+        console.log("API Call Complete")
+    })
+    console.log(pokemonList)
+});
