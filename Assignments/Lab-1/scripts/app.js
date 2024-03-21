@@ -1,3 +1,4 @@
+
 /** the trigger for fading in text**/
 const paragraphs = document.querySelectorAll(".section__paragraph");
 

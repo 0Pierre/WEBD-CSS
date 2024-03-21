@@ -269,3 +269,13 @@ div.gallery {
     font-size: 10px; 
     margin-top: 5px;
 }
+
+/* ------------------------------------------ Blog Page  --------------------------------------------------*/
+
+.container {
+    background-color: rgba(0, 0, 0, 0.335);
+    padding-top: 14px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 3px solid black;
+}

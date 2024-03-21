@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="./scripts/blog.js"></script>
     <script defer src="./scripts/app.js"></script>
     <script defer src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -75,22 +76,18 @@
       <h1 class="headings">My Blog</h1>
     </header>
   </div>
-  <div>
-    <table class="center size rounded-5">
-      <caption class="captions" style="caption-side: top; text-align: center;">Just some things about me:</caption>
-      <tr><!-- row 1 --> 
-        <td>
-          <p class="section__paragraph">My name is Francisco Gonzalez, a dedicated student enrolled in the Computer Programming program at Durham College. 
-            Amidst the rigors of academia, I find peace in the companionship of my three cats and dog, whose presence adds 
-            warmth to my days. Beyond the realm of technology, I indulge in the thrill of motorcycle rides, relishing the sense of freedom they offer on 
-            the open road. Sports, particularly hockey and volleyball, serve as outlets for both physical activity and friendly competition, providing a 
-            welcomed balance to my academic pursuits. Additionally, I'm an avid gamer, finding enjoyment in immersive RPGs and strategic online battles. 
-            My commitment extends beyond personal interests; I hold dual roles as a valued team member at Costco and a dedicated skating instructor for the 
-            City of Oshawa. It's a busy yet fulfilling life, characterized by a blend of academic excellence, personal passions, and meaningful community involvement.
-          </p>
-        </td>
-      </tr>
-    </table>
+  <div class="blog-container">
+    <div id="blog-posts" class="container">
+    </div>
+    <template id="blog-card-template">
+      <div class="card text-white bg-dark mb-3 blog-card">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+        </div>
+      </div>
+    </template>
   </div>
 </body>
 </html>
