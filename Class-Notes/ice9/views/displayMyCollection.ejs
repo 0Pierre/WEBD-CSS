@@ -1,0 +1,18 @@
+// 3. EJS - displayMyCollection.ejs
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pokemon Collection</title>
+</head>
+<body>
+    <h1>My Pokemon Collection</h1>
+    <ul>
+        <% myCollection.forEach(pokemon => { %>
+            <li><%= pokemon.name %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
