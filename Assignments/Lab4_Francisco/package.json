@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "_comment" : "ebtry file for nodemon (5 marks)",
     "start": "nodemon index.js"
   },
   
   "dependencies": {
-    "_comment" : "Setting up dependencies (5 marks)",
     "bcrypt": "5.1.1",
     "bootstrap": "5.3.3",
     "dotenv": "16.4.5",
