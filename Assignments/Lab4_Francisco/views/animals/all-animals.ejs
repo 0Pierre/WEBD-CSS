@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    {{> _nav}}
+
+    <main>
+        <h1>All Animals</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Zoo</th>
+                    <th>Scientific Name</th>
+                    <th>Common Name</th>
+                    <th>Given Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Age</th>
+                    <th>Is Transportable</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each animals}}
+                <tr>
+                    <td>{{this.zoo}}</td>
+                    <td>{{this.scientificName}}</td>
+                    <td>{{this.commonName}}</td>
+                    <td>{{this.givenName}}</td>
+                    <td>{{this.gender}}</td>
+                    <td>{{this.dateOfBirth}}</td>
+                    <td>{{this.age}}</td>
+                    <td>{{this.isTransportable}}</td>
+                    <td><a href="/edit-animal/{{this._id}}">Edit</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

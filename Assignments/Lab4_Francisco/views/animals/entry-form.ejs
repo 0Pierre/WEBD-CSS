@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    {{> _nav}}
+
+    <main>
+        <h1>Animal Entry Form</h1>
+        <form action="/add-animal" method="post">
+            <label for="zoo">Zoo:</label>
+            <input type="text" id="zoo" name="zoo" required>
+            
+            <label for="scientificName">Scientific Name:</label>
+            <input type="text" id="scientificName" name="scientificName" required>
+            
+            <label for="commonName">Common Name:</label>
+            <input type="text" id="commonName" name="commonName" required>
+            
+            <label for="givenName">Given Name:</label>
+            <input type="text" id="givenName" name="givenName" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="isTransportable">Is Transportable:</label>
+            <input type="checkbox" id="isTransportable" name="isTransportable" value="true" required>
+            
+            <button type="submit">Add Animal</button>
+            <button type="reset">Reset</button>
+        </form>
+    </main>
+</body>
+</html>
