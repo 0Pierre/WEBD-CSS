@@ -5,6 +5,7 @@ This project is a professional website designed for a contractor business. The w
 
 ## Project Structure
 
+```bash
 contractor-website/
 │
 ├── index.html # Homepage
@@ -34,7 +35,7 @@ contractor-website/
 │ └── promo.mp4 # Promotional video
 │
 └── README.md # Project documentation
-
+```
 
 ## Features
 
@@ -80,6 +81,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For questions or further information, you can reach out to:
 
 - **Name**: Francisco (Cisco)
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/your-profile)
+- **Email**: [gonzalezmof@gmail.com](mailto:your-email@example.com)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/francisco-gonzalez-moreno-b7938b292/)
 
